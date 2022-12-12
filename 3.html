@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <h1>Задание 3</h1>
+        </header>
+        <main>
+            <h2>3.1</h2>
+            <form action="" method="post" enctype="multipart/form-data">
+                Фамилия
+                <input type="text" name="Фамилия" required><br>
+                Инициалы
+                <input type="text" name="Инициалы" required><br>
+                Пароль
+                <input type="password" name="Пароль" required><br>
+                Адрес получателя
+                <input type="text" name="Адрес получателя" required><br>
+                Количество
+                <input type="number" name="Количество" required><br>
+                Тип
+                <select name="Мясо">
+                    <option value="Куриные">Куриные</option>
+                    <option value="Гусные">Гусиные</option>
+                    <option value="Утиные">Утиные</option>
+                    <option value="Из индейка">Из индейки</option>
+                </select>
+                <select name="Сорт">
+                    <option value="Отборные">Отборные</option>
+                    <option value="1-го сорта">1-го сорта</option>
+                    <option value="2-го сорта">2-го сорта</option>
+                </select><br>
+                Доставка
+                <input type="radio" name="Доставка" value="Почтой"> Почтой
+                <input type="radio" name="Доставка" value="Электронно"> Электронно
+                <input type="radio" name="Доставка" value="Курьером"> Курьером<br>
+                Требуется накладная
+                <input type="checkbox" name="Требуется накладная"><br>
+                Дополнительная информация<br>
+                <textarea rows="3" cols="64" name="Дополнительная информация"></textarea><br>
+                <input type="submit" value="Заказать">
+                <input type="reset" value="Отменить">
+            </form>
+            <h2>3.2</h2>
+            <form action="" method="post">
+                Логин:<br>
+                <input type="text" name="Логин" required><br>
+                Пароль:<br>
+                <input type="password" name="Пароль" required><br>
+                URL-адрес сайта:<br>
+                <input type="url" name="URL-адрес сайта" required><br>
+                Название сайта:<br>
+                <input type="text" name="Название сайта" required><br>
+                Описание сайта:<br>
+                <textarea rows="5" cols="64" name="Дополнительная информация"></textarea><br>
+                Тема сайта:<br>
+                <select name="Тема сайта">
+                    <option value="Тема не выбрана" selected>Тема не выбрана</option>
+                    <option value="Тема 1">Тема 1</option>
+                    <option value="Тема 2">Тема 2</option>
+                    <option value="Тема 3">Тема 3</option>
+                </select><br>
+                Баннер 88x31:<br>
+                <input type="file" name="Баннер"><br>
+                <input type="reset" value="Очистить">
+                <input type="submit" value="Отправить">
+            </form>
+        </main>
+    </body>
+</html>
