@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Задание 5</h1>
+    <script type="text/javascript">
+        function determinant(a11, a12, a13, a21, a22, a23, a31, a32, a33) {
+            var d;
+            d = a11 * a22 * a33 + a12 * a23 * a31 + a13 * a21 * a32;
+            d = d - a13 * a22 * a31 - a12 * a21 * a33 - a11 * a23 * a32;
+
+            return d
+        }
+
+        let a11 = document.createElement("input");
+        a11.type = "text";
+        a11.readOnly = "readonly";
+        document.write("a11=");
+        document.body.appendChild(a11);
+        let a12 = document.createElement("input");
+        a12.type = "text";
+        a12.readOnly = "readonly";
+        document.write("a12=");
+        document.body.appendChild(a12);
+        let a13 = document.createElement("input");
+        a13.type = "text";
+        a13.readOnly = "readonly";
+        document.write("a13=");
+        document.body.appendChild(a13);
+        let b1 = document.createElement("input");
+        b1.type = "text";
+        b1.readOnly = "readonly";
+        document.write("b1=");
+        document.body.appendChild(b1);
+        document.write("<br>");
+
+        let a21 = document.createElement("input");
+        a21.type = "text";
+        a21.readOnly = "readonly";
+        document.write("a21=");
+        document.body.appendChild(a21);
+        let a22 = document.createElement("input");
+        a22.type = "text";
+        a22.readOnly = "readonly";
+        document.write("a22=");
+        document.body.appendChild(a22);
+        let a23 = document.createElement("input");
+        a23.type = "text";
+        a23.readOnly = "readonly";
+        document.write("a23=");
+        document.body.appendChild(a23);
+        let b2 = document.createElement("input");
+        b2.type = "text";
+        b2.readOnly = "readonly";
+        document.write("b2=");
+        document.body.appendChild(b2);
+        document.write("<br>");
+
+        let a31 = document.createElement("input");
+        a31.type = "text";
+        a31.readOnly = "readonly";
+        document.write("a31=");
+        document.body.appendChild(a31);
+        let a32 = document.createElement("input");
+        a32.type = "text";
+        a32.readOnly = "readonly";
+        document.write("a32=");
+        document.body.appendChild(a32);
+        let a33 = document.createElement("input");
+        a33.type = "text";
+        a33.readOnly = "readonly";
+        document.write("a33=");
+        document.body.appendChild(a33);
+        let b3 = document.createElement("input");
+        b3.type = "text";
+        b3.readOnly = "readonly";
+        document.write("b3=");
+        document.body.appendChild(b3);
+        document.write("<br>");
+
+        let gen_btn = document.createElement('button');
+        let gen_btn_text = document.createTextNode('Сгенерировать коэффициенты');
+        gen_btn.appendChild(gen_btn_text);
+        document.body.appendChild(gen_btn);
+        gen_btn.onclick = function () {
+            a11.value = Math.floor(Math.random() * 19) + 1;
+            a12.value = Math.floor(Math.random() * 19) + 1;
+            a13.value = Math.floor(Math.random() * 19) + 1;
+            b1.value = Math.floor(Math.random() * 19) + 1;
+            a21.value = Math.floor(Math.random() * 19) + 1;
+            a22.value = Math.floor(Math.random() * 19) + 1;
+            a23.value = Math.floor(Math.random() * 19) + 1;
+            b2.value = Math.floor(Math.random() * 19) + 1;
+            a31.value = Math.floor(Math.random() * 19) + 1;
+            a32.value = Math.floor(Math.random() * 19) + 1;
+            a33.value = Math.floor(Math.random() * 19) + 1;
+            b3.value = Math.floor(Math.random() * 19) + 1;
+        }
+        document.write("<br>");
+
+        let x1 = document.createElement("input");
+        x1.type = "text";
+        x1.readOnly = "readonly";
+        document.write("x1=");
+        document.body.appendChild(x1);
+        let x2 = document.createElement("input");
+        x2.type = "text";
+        x2.readOnly = "readonly";
+        document.write("x2=");
+        document.body.appendChild(x2);
+        let x3 = document.createElement("input");
+        x3.type = "text";
+        x3.readOnly = "readonly";
+        document.write("x3");
+        document.body.appendChild(x3);
+        document.write("<br>");
+
+        let solve_btn = document.createElement('button');
+        let solve_btn_text = document.createTextNode('Решение системы');
+        solve_btn.appendChild(solve_btn_text);
+        document.body.appendChild(solve_btn);
+        solve_btn.onclick = function () {
+            let d;
+            let d1, d2, d3;
+
+            d = determinant(a11.value, a12.value, a13.value, a21.value, a22.value, a23.value, a31.value, a32.value, a33.value);
+            d1 = determinant(b1.value, a12.value, a13.value, b2.value, a22.value, a23.value, b3.value, a32.value, a33.value);
+            d2 = determinant(a11.value, b1.value, a13.value, a21.value, b2.value, a23.value, a31.value, b3.value, a33.value);
+            d3 = determinant(a11.value, a12.value, b1.value, a21.value, a22.value, b2.value, a31.value, a32.value, b3.value);
+
+            x1.value = d1 / d;
+            x2.value = d2 / d;
+            x3.value = d3 / d;
+        }
+    </script>
+</body>
+
+</html>

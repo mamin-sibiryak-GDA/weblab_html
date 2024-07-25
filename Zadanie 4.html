@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Задание 4</h1>
+    <script type="text/javascript">
+        function sortAsc(A) {
+            let tmp;
+
+            for (let i = 0; i < A.length - 1; i++) {
+                for (let j = i + 1; j < A.length; j++) {
+                    if (A[j] < A[i]) {
+                        tmp = A[j]; A[j] = A[i]; A[i] = tmp;
+                    }
+                }
+            }
+
+            return A;
+        }
+
+        function sortDesc(A) {
+            let tmp;
+
+            for (let i = 0; i < A.length - 1; i++) {
+                for (let j = i + 1; j < A.length; j++) {
+                    if (A[j] > A[i]) {
+                        tmp = A[j]; A[j] = A[i]; A[i] = tmp;
+                    }
+                }
+            }
+
+            return A;
+        }
+
+        let a = new Array(10);
+        document.write("<table border='1' width=600 height=600>");
+        document.write('<caption><h2>Не сортированный массив</h2></caption>');
+        for (let i = 0; i < 10; i++) {
+            a[i] = [];
+            document.write("<tr>");
+            for (let j = 0; j < 10; j++) {
+                a[i][j] = Math.floor(Math.random() * 99) + 1;
+                document.write("<td align='center'>" + a[i][j] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        let btn = document.createElement('button');
+        let textInBtn = document.createTextNode('Сортировка');
+        btn.appendChild(textInBtn);
+        document.body.appendChild(btn);
+        btn.onclick = function () {
+            document.write("<h1>Задание 4</h1>");
+            document.write("<table border='1' width=600 height=600>");
+            document.write('<caption><h2>Сортированный массив</h2></caption>');
+            for (let i = 0; i < 10; i++) {
+                if (i % 2 == 0) {
+                    a[i] = sortAsc(a[i]);
+                } else {
+                    a[i] = sortDesc(a[i]);
+                }
+                document.write("<tr>");
+                for (var j = 0; j < 10; j++) {
+                    document.write("<td align='center'>" + a[i][j] + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</body>
+
+</html>

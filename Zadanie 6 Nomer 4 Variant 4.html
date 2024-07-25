@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $('#div1').delay(100).animate({ marginTop: +36 }, "slow");
+
+                $('#div3').delay(100).animate({ marginTop: +36 }, "slow");
+
+                $('#div5').delay(100).animate({ marginTop: +36 }, "slow");
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <button>Кнопка</button><br>
+
+    <div id="div1" style="background:red; height:25px; width:25px; position:absolute;"> </div><br><br>
+    <div id="div2" style="background:yellow; height:25px; width:25px; position:absolute;"></div><br><br>
+    <div id="div3" style="background:blue; height:25px; width:25px; position:absolute;"></div><br><br>
+    <div id="div4" style="background:lime; height:25px; width:25px; position:absolute;"></div><br><br>
+    <div id="div5" style="background:purple; height:25px; width:25px; position:absolute;"></div><br><br>
+    <div id="div6" style="background:orange; height:25px; width:25px; position:absolute;"></div><br><br>
+</body>
+
+</html>

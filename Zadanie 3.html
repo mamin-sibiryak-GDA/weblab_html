@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Задание 3</h1>
+    <script type="text/javascript">
+        document.write("<h2>window:</h2>")
+        for (let i in window) {
+            document.write(i + " : " + window[i] + "<br>");
+        }
+
+        document.write("<h2>document:</h2>")
+        for (let i in document) {
+            document.write(i + " : " + document[i] + "<br>");
+        }
+
+        document.write("<h2>location:</h2>")
+        for (let i in location) {
+            document.write(i + " : " + location[i] + "<br>");
+        }
+
+        document.write("<h2>navigator:</h2>")
+        for (let i in navigator) {
+            document.write(i + " : " + navigator[i] + "<br>");
+        }
+    </script>
+</body>
+
+</html>
